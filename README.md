@@ -1,9 +1,4 @@
-from docx import Document
-from docx.shared import Pt
-
-# Create a new Document
-doc = Document()
-doc.add_heading('AI Tutor 📚🤖', 0)
+# AI_Tutor
 
 # Introduction
 doc.add_paragraph(
