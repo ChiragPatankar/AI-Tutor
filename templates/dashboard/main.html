@@ -1,0 +1,40 @@
+<!-- templates/dashboard.html -->
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% end block %}
+
+{% block content %}
+<div class="dashboard-container">
+    <aside class="sidebar">
+        <div class="user-info">
+            <h3>Welcome, {{ current_user.name }}</h3>
+            <p>Level: {{ current_user.learning_level }}</p>
+        </div>
+
+        <div class="progress-section">
+            <h4>Your Progress</h4>
+            <div class="progress-bar">
+                <div class="progress" style="width: {{ user_progress }}%"></div>
+            </div>
+        </div>
+
+        <nav class="side-nav">
+            <a href="#recommended">Recommended</a>
+            <a href="#videos">Videos</a>
+            <a href="#pdfs">PDFs</a>
+            <a href="#websites">Websites</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <section id="recommended">
+            <h2>Recommended for You</h2>
+            <div class="content-grid">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Other sections -->
+    </main>
+</div>
+{% end block %}
